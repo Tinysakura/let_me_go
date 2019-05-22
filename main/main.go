@@ -26,4 +26,9 @@ func main() {
 	//fmt.Println(fmt.Sprintf("numbers:%f", stat.Numbers))
 	//fmt.Println(fmt.Sprintf("median:%f", stat.Median))
 	//fmt.Println(fmt.Sprintf("mean:%f", stat.Mean))
+
+	// chapter3
+	//s := os.Args[1]
+	//songs := chapter3.ReadPlsPlaylist(s)
+	//chapter3.WriteM3uPlaylist(songs)
 }
