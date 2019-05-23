@@ -44,10 +44,12 @@ func main() {
 	//	fmt.Println(number)
 	//}
 
-	uniDimensional := chapter4.Flatten([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}})
+	//uniDimensional := chapter4.Flatten([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}})
+	//
+	//for _, number := range uniDimensional {
+	//	fmt.Println(number)
+	//}
 
-	for _, number := range uniDimensional {
-		fmt.Println(number)
-	}
-
+	multiDimension := chapter4.Make2D([]int{1, 2, 3, 4, 5}, 2)
+	fmt.Println(multiDimension)
 }
