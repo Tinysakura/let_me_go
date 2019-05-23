@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"let_me_go/chapter4"
-)
+import "let_me_go/chapter4"
 
 func main() {
 	// helloworld
@@ -50,6 +47,19 @@ func main() {
 	//	fmt.Println(number)
 	//}
 
-	multiDimension := chapter4.Make2D([]int{1, 2, 3, 4, 5}, 2)
-	fmt.Println(multiDimension)
+	//multiDimension := chapter4.Make2D([]int{1, 2, 3, 4, 5}, 2)
+	//fmt.Println(multiDimension)
+
+	iniData := []string{
+		";",
+		"",
+		"[App]",
+		"Vendor=Mozilla",
+		"Profile=mozilla/firefox",
+		"[Gecko]",
+		"minVersion=1.9.1",
+		"maxVersion=1.9.1.*",
+	}
+	iniMap := chapter4.ParseIni(iniData)
+	println(iniMap)
 }

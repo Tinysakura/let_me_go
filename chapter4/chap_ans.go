@@ -3,6 +3,7 @@ package chapter4
 import (
 	"math"
 	"sort"
+	"strings"
 )
 
 // 删除切片中的重复元素
@@ -53,6 +54,32 @@ func Make2D(uniDimension []int, dimensionNumber int)(multiDimension [][]int) {
 	}
 
 	return multiDimension
+}
+
+func ParseIni(iniData []string)(iniMap map[string]map[string]string) {
+
+	var key string
+	var childMap map[string]string
+	iniMap = make(map[string]map[string]string)
+
+	for _, iniLine := range iniData {
+		iniLine = strings.TrimSpace(iniLine)
+		if strings.HasPrefix(iniLine, ";") || iniLine == "" {
+			continue
+		}
+
+		if strings.HasPrefix(iniLine, "[") {
+			key = iniLine[1:strings.Index(iniLine, "]")]
+			childMap = make(map[string]string)
+			iniMap[key] = childMap
+			continue
+		}
+
+		split := strings.Split(iniLine, "=")
+		childMap[split[0]] = split[1]
+	}
+
+	return iniMap
 }
 
 
