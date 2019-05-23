@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"let_me_go/chapter4"
+)
+
 func main() {
 	// helloworld
 	// helloworld.SayHelloWorld()
@@ -31,4 +36,11 @@ func main() {
 	//s := os.Args[1]
 	//songs := chapter3.ReadPlsPlaylist(s)
 	//chapter3.WriteM3uPlaylist(songs)
+
+	// chapter4
+	unique := chapter4.UniqueInts([]int{1, 1, 2, 2, 4, 5})
+
+	for _, number := range unique {
+		fmt.Println(number)
+	}
 }
