@@ -38,9 +38,16 @@ func main() {
 	//chapter3.WriteM3uPlaylist(songs)
 
 	// chapter4
-	unique := chapter4.UniqueInts([]int{1, 1, 2, 2, 4, 5})
+	//unique := chapter4.UniqueInts([]int{1, 1, 2, 2, 4, 5})
+	//
+	//for _, number := range unique {
+	//	fmt.Println(number)
+	//}
 
-	for _, number := range unique {
+	uniDimensional := chapter4.Flatten([][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}})
+
+	for _, number := range uniDimensional {
 		fmt.Println(number)
 	}
+
 }

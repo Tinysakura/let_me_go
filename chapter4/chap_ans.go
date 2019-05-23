@@ -23,3 +23,16 @@ func UniqueInts(original []int)(unique []int) {
 
 	return unique
 }
+
+// 多维切片降维
+func Flatten(multiDimension [][]int)(uniDimensional []int) {
+	for _, dimension := range multiDimension {
+		for _, element := range dimension {
+			uniDimensional = append(uniDimensional, element)
+		}
+	}
+
+	return uniDimensional
+}
+
+
