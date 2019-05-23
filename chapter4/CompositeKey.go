@@ -7,11 +7,11 @@ type CompositeKey struct {
 
 type CompositeKeys []CompositeKey
 
-func (compositeKey CompositeKeys)Len() int {
+func (compositeKey CompositeKeys) Len() int {
 	return len(compositeKey)
 }
 
-func (compositeKey CompositeKeys)Less(i, j int) bool {
+func (compositeKey CompositeKeys) Less(i, j int) bool {
 	return compositeKey[i].OriginalKey < compositeKey[j].OriginalKey
 }
 
