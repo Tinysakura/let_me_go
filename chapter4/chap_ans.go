@@ -1,6 +1,7 @@
 package chapter4
 
 import (
+	"fmt"
 	"math"
 	"sort"
 	"strings"
@@ -82,4 +83,32 @@ func ParseIni(iniData []string)(iniMap map[string]map[string]string) {
 	return iniMap
 }
 
+func PrintIni(iniMap map[string]map[string]string) {
+	keySlice := CompositeKeys{}
+
+	for key, _ := range iniMap {
+		keySlice = keySlice.Append(CompositeKey{key, strings.ToLower(key)})
+	}
+
+	sort.Sort(keySlice)
+
+	for _, key := range keySlice {
+		childMap := iniMap[key.OriginalKey]
+
+		childKeySlice := CompositeKeys{}
+
+		for key, _ := range childMap {
+			childKeySlice = childKeySlice.Append(CompositeKey{key, strings.ToLower(key)})
+		}
+
+		sort.Sort(childKeySlice)
+
+		fmt.Println("[" + key.OriginalKey + "]")
+		for _, key := range childKeySlice {
+			fmt.Println(key.OriginalKey)
+			fmt.Println(childMap[key.OriginalKey])
+		}
+		fmt.Println()
+	}
+}
 

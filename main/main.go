@@ -61,5 +61,7 @@ func main() {
 		"maxVersion=1.9.1.*",
 	}
 	iniMap := chapter4.ParseIni(iniData)
-	println(iniMap)
+	//println(iniMap)
+
+	chapter4.PrintIni(iniMap)
 }
