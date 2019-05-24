@@ -1,6 +1,9 @@
 package main
 
-import "let_me_go/chapter4"
+import (
+	"fmt"
+	"let_me_go/chapter5"
+)
 
 func main() {
 	// helloworld
@@ -50,18 +53,26 @@ func main() {
 	//multiDimension := chapter4.Make2D([]int{1, 2, 3, 4, 5}, 2)
 	//fmt.Println(multiDimension)
 
-	iniData := []string{
-		";",
-		"",
-		"[App]",
-		"Vendor=Mozilla",
-		"Profile=mozilla/firefox",
-		"[Gecko]",
-		"minVersion=1.9.1",
-		"maxVersion=1.9.1.*",
-	}
-	iniMap := chapter4.ParseIni(iniData)
-	//println(iniMap)
+	//iniData := []string{
+	//	";",
+	//	"",
+	//	"[App]",
+	//	"Vendor=Mozilla",
+	//	"Profile=mozilla/firefox",
+	//	"[Gecko]",
+	//	"minVersion=1.9.1",
+	//	"maxVersion=1.9.1.*",
+	//}
+	//iniMap := chapter4.ParseIni(iniData)
+	////println(iniMap)
+	//
+	//chapter4.PrintIni(iniMap)
 
-	chapter4.PrintIni(iniMap)
+	// chapter5
+	files, e := chapter5.ArchiveFileListMap("/Users/chenfeihao/Desktop/vpn.tar.gz")
+	if e == nil {
+		fmt.Println(files)
+	} else {
+		fmt.Println(e)
+	}
 }
