@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"let_me_go/chapter5"
-)
-
 func main() {
 	// helloworld
 	// helloworld.SayHelloWorld()
@@ -69,10 +64,13 @@ func main() {
 	//chapter4.PrintIni(iniMap)
 
 	// chapter5
-	files, e := chapter5.ArchiveFileListMap("/Users/chenfeihao/Desktop/vpn.tar.gz")
-	if e == nil {
-		fmt.Println(files)
-	} else {
-		fmt.Println(e)
-	}
+	//files, e := chapter5.ArchiveFileListMap("/Users/chenfeihao/Desktop/vpn.tar.gz")
+	//if e == nil {
+	//	fmt.Println(files)
+	//} else {
+	//	fmt.Println(e)
+	//}
+
+	//strList := []string{"aab", "aac", "aad", "aad"}
+	//fmt.Println(chapter5.CommonPrefix(strList))
 }

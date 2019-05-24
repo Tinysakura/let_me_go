@@ -88,4 +88,39 @@ func fileSuffix(filePath string) string {
 	return suffix
 }
 
+// 返回一个切片中所有字符串的共同前缀
+func CommonPrefix(slice []string) string {
+	if len(slice) == 0 {
+		return ""
+	}
+
+	if len(slice) == 1 {
+		return slice[0]
+	}
+
+	s1 := slice[0]
+	s2 := slice[1]
+
+	var commonPrefix []rune
+
+	for index, charOutside := range []rune(s1) {
+		if charOutside == []rune(s2)[index] {
+			commonPrefix = append(commonPrefix, rune(charOutside))
+		} else {
+			break
+		}
+	}
+
+	for _, s := range slice[2:] {
+		for i := len(commonPrefix); i > 0 ; i -- {
+			if strings.HasPrefix(s, string(commonPrefix[0:i])) {
+				commonPrefix = commonPrefix[0:i]
+				break
+			}
+		}
+	}
+
+	fmt.Println(fmt.Sprintf("commonPrefix:%s", string(commonPrefix)))
+	return string(commonPrefix)
+}
 
