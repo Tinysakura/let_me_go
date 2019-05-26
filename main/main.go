@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"let_me_go/chapter6/my_oslice"
+)
+
 func main() {
 	// helloworld
 	// helloworld.SayHelloWorld()
@@ -78,4 +83,13 @@ func main() {
 	//font := font.New("se", 21)
 	//fmt.Println(font)
 
+	stringSlice := my_oslice.NewStringSlice()
+	stringSlice.Add(0, "a")
+	stringSlice.Add(1, "b")
+	fmt.Println(stringSlice)
+	fmt.Println(stringSlice.At(3))
+	fmt.Println(stringSlice.Len())
+	fmt.Println(stringSlice.Index("a"))
+	stringSlice.Remove("a")
+	fmt.Println(stringSlice)
 }
