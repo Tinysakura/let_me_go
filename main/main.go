@@ -73,4 +73,9 @@ func main() {
 
 	//strList := []string{"aab", "aac", "aad", "aad"}
 	//fmt.Println(chapter5.CommonPrefix(strList))
+
+	// chapter6
+	//font := font.New("se", 21)
+	//fmt.Println(font)
+
 }
