@@ -99,4 +99,8 @@ func main() {
 	//fmt.Println(safeSlice.At(0))
 	//safeSlice.Delete(0)
 	//fmt.Println(safeSlice.Len())
+
+	//args1 := os.Args[1]
+	//split := strings.Split(args1, ",")
+	//imgtagswitch.ImgSwitch2H5Tag(split)
 }
