@@ -1,5 +1,10 @@
 package main
 
+import (
+	"let_me_go/network"
+	"time"
+)
+
 func main() {
 	// helloworld
 	// helloworld.SayHelloWorld()
@@ -110,4 +115,6 @@ func main() {
 	//file.ScanRead("/Users/chenfeihao/Desktop/go.txt")
 	//file.ZipFile("/Users/chenfeihao/Desktop/go.zip")
 	//file.DownloadFromWeb("https://kaoyan.icourse163.org/course/terms/1206654202.htm?courseId=1206345801","/Users/chenfeihao/Desktop/download.html")
+	network.OpenServer(7777)
+	time.Sleep(time.Duration(3) * time.Second)
 }
