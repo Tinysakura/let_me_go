@@ -103,4 +103,11 @@ func main() {
 	//args1 := os.Args[1]
 	//split := strings.Split(args1, ",")
 	//imgtagswitch.ImgSwitch2H5Tag(split)
+
+	//file.WriteFile("/Users/chenfeihao/Desktop/go.txt", "hello go")
+	//file.BufferWriteFile("/Users/chenfeihao/Desktop/go.txt", "\nbuffered write")
+	//file.ReadFile("/Users/chenfeihao/Desktop/go.txt")
+	//file.ScanRead("/Users/chenfeihao/Desktop/go.txt")
+	//file.ZipFile("/Users/chenfeihao/Desktop/go.zip")
+	//file.DownloadFromWeb("https://kaoyan.icourse163.org/course/terms/1206654202.htm?courseId=1206345801","/Users/chenfeihao/Desktop/download.html")
 }
