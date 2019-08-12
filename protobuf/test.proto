@@ -1,0 +1,7 @@
+syntax = "proto3";  //指定版本，必须要写（proto3、proto2）
+package proto;
+
+message UserInfo {
+   string message = 1;
+   int32  length  = 2;
+}
