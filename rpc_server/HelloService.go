@@ -5,7 +5,7 @@ import (
 	"net/rpc"
 )
 
-const Hello_Service_Name = "rpc.HelloService"
+const Hello_Service_Name = "HelloService"
 
 type HelloService interface {
 	Hello (request string, response *string) error

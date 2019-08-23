@@ -15,7 +15,7 @@ func Dial(ip string) *HelloServiceClient {
 }
 
 func (client *HelloServiceClient)Hello(request string, response *string) error {
-	client.client.Call(rpc_server.Hello_Service_Name, request, response)
+	client.client.Call(rpc_server.Hello_Service_Name + ".Hello", request, response)
 
 	return nil
 }
